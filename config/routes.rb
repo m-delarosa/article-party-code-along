@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
-  resources :authors, only: [:index, :show]
+  resources :authors, only: [:index, :show, :create, :update, :destroy]
 
-  #resources :authors, only: [:index, :show, :create]
+  #resources :authors, only: [:index, :show, :create, :update, :destroy]
 
   #you can chain actions in the format above. Don't want to do this
   #until you absolutely need to. To limit exposure.
