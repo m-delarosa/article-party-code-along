@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
+  resources :articles, only: [:index, :show, :create, :update, :destroy]
   resources :authors, only: [:index, :show, :create, :update, :destroy]
-
+  resources :magazines, only: [:index, :show, :create, :update, :destroy]
   #resources :authors, only: [:index, :show, :create, :update, :destroy]
 
   #you can chain actions in the format above. Don't want to do this
