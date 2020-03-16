@@ -12,10 +12,23 @@ class ArticlesController < ApplicationController
     def create
         new_article = Article.create(
             title: params[:title], 
-            author: params[:author],
-            magazine: params[:magazine]
+            author_id: params[:author],
+            magazine_id: params[:magazine]
         )
 
         render json: new_article
+    end
+
+    def update
+        article = Article.find(params[:id])
+        article.update(title: params[:title], author_id: params[:author], magazine_id: params[:magazine] )
+        render json: article
+    end
+
+    def destroy
+        article = Article.find(params[:id])
+        article.destroy
+
+        render json: Article.all
     end
 end
