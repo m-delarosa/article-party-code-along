@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Article Party</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <h1>Authors</h1>
+    <p id="authors"></p>
+    <h3>Add a New Article</h3>
+    <form method="POST" action="http://localhost:3000/articles">
+      <input type="text" name="title" placeholder="Add title of article" />
+
+      <select id="author-list" name="author"> </select>
+
+      <select id="magazine-list" name="magazine"> </select>
+
+      <input type="submit" value="Add Article" />
+    </form>
+
+    <script src="app.js"></script>
+  </body>
+</html>
