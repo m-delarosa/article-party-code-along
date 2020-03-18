@@ -16,7 +16,8 @@ class ArticlesController < ApplicationController
             magazine_id: params[:magazine]
         )
 
-        render json: new_article
+        # render json: Article.all
+        redirect_to "http://localhost:3001/showAuthor.html?id=#{new_article.author_id}"
     end
 
     def update
